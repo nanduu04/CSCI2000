@@ -1,0 +1,67 @@
+driver   : run_test.py
+duration : 3.695672035217285
+error    : 
+name     : Test 1
+output   : 
+results  : (1)  desc : df = build_df()
+                       answer1 = """
+                           month       city product_name  sales
+                       0   Jan    Toronto        bread    190
+                       1   Jan   Montreal        bread    210
+                       2   Jan     Ottawa        bread    190
+                       3   Jan  Vancouver        bread    210
+                       4   Jan    Toronto       cheese    310
+                       5   Jan   Montreal       cheese    510
+                       6   Feb    Toronto        bread    230
+                       7   Feb   Montreal        bread    220
+                       8   Feb   Montreal       cheese    310
+                       """
+                       assert(str(df).strip() == answer1.strip())
+                grade: 1.0
+                ok   : True
+                title: Test cases (1)
+           (2)  desc : cities = city_column(df)
+                       assert(isinstance(cities, pd.Series))
+                grade: 1.0
+                ok   : True
+                title: Test cases (2)
+           (3)  desc : assert(cities.name == 'city')
+                grade: 1.0
+                ok   : True
+                title: Test cases (3)
+           (4)  desc : assert(set(cities.values) == {'Toronto', 'Vancouver', 'Montreal', 'Ottawa'})
+                grade: 1.0
+                ok   : True
+                title: Test cases (4)
+           (5)  desc : cheese = cheese_rows(df)
+                       assert(set(cheese.columns) == {'city', 'month', 'product_name', 'sales'})
+                grade: 1.0
+                ok   : True
+                title: Test cases (5)
+           (6)  desc : assert(cheese.sales.sum() == 1130)
+                grade: 1.0
+                ok   : True
+                title: Test cases (6)
+           (7)  desc : cheese_1 = cheese_sales(df, 'Jan')
+                       cheese_2 = cheese_sales(df, 'Feb')
+                       assert(set(cheese_1.columns) == {'city', 'sales'})
+                       assert(set(cheese_2.columns) == {'city', 'sales'})
+                grade: 1.0
+                ok   : True
+                title: Test cases (7)
+           (8)  desc : assert(cheese_1.shape == (2,2))
+                grade: 1.0
+                ok   : True
+                title: Test cases (8)
+           (9)  desc : assert(cheese_2.shape == (1,2))
+                grade: 1.0
+                ok   : True
+                title: Test cases (9)
+           (10) desc : assert(cheese_1.sales.sum() == 820)
+                       assert(cheese_2.sales.sum() == 310)
+                grade: 1.0
+                ok   : True
+                title: Test cases (10)
+success  : 10.0
+timestamp: 2019-12-04
+total    : 10.0

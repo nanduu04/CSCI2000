@@ -1,0 +1,42 @@
+{
+    "driver": "run_test.py",
+    "duration": 5.365686893463135,
+    "error": "",
+    "name": "Test 1",
+    "output": "",
+    "results": [
+        {
+            "desc": "# sanity check\nassert(get_data_shape() is not None)",
+            "grade": 2.0,
+            "ok": true,
+            "title": "Basic notebook tests (1)"
+        },
+        {
+            "desc": "assert(get_samples_top_percentile_by_petal_area(99) is not None)",
+            "grade": 2.0,
+            "ok": true,
+            "title": "Basic notebook tests (2)"
+        },
+        {
+            "desc": "assert(len(get_samples_top_percentile_by_petal_area(100)) == 1)",
+            "grade": 2.0,
+            "ok": true,
+            "title": "Basic notebook tests (3)"
+        },
+        {
+            "desc": "assert(get_samples_bottom_percentile_by_petal_area(1) is not None)",
+            "grade": 2.0,
+            "ok": true,
+            "title": "Basic notebook tests (4)"
+        },
+        {
+            "desc": "assert(len(get_samples_bottom_percentile_by_petal_area(0)) == 1)",
+            "grade": 2.0,
+            "ok": true,
+            "title": "Basic notebook tests (5)"
+        }
+    ],
+    "success": 10.0,
+    "timestamp": "2019-11-13",
+    "total": 10.0
+}

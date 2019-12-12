@@ -1,0 +1,22 @@
+driver   : run_test.py
+duration : 7.478486776351929
+error    : 
+name     : Test 1
+output   : 
+results  : (1)  desc : x = 1
+                       y = 2
+                       z = f1(x, y)
+                       assert(z == x + y)
+                       Testing the basic setup of the Notebook environment.
+                grade: 50.0
+                ok   : True
+                title: Adding (1)
+           (2)  desc : x = [3, 2, 1]
+                       y = f2(x)
+                       assert(y == [1, 2, 3])
+                grade: 50.0
+                ok   : True
+                title: Adding (2)
+success  : 100.0
+timestamp: 2019-10-04
+total    : 100.0

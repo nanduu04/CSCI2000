@@ -1,0 +1,72 @@
+{
+    "driver": "run_test.py",
+    "duration": 3.695672035217285,
+    "error": "",
+    "name": "Test 1",
+    "output": "",
+    "results": [
+        {
+            "desc": "df = build_df()\nanswer1 = \"\"\"\n    month       city product_name  sales\n0   Jan    Toronto        bread    190\n1   Jan   Montreal        bread    210\n2   Jan     Ottawa        bread    190\n3   Jan  Vancouver        bread    210\n4   Jan    Toronto       cheese    310\n5   Jan   Montreal       cheese    510\n6   Feb    Toronto        bread    230\n7   Feb   Montreal        bread    220\n8   Feb   Montreal       cheese    310\n\"\"\"\nassert(str(df).strip() == answer1.strip())",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (1)"
+        },
+        {
+            "desc": "cities = city_column(df)\nassert(isinstance(cities, pd.Series))",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (2)"
+        },
+        {
+            "desc": "assert(cities.name == 'city')",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (3)"
+        },
+        {
+            "desc": "assert(set(cities.values) == {'Toronto', 'Vancouver', 'Montreal', 'Ottawa'})",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (4)"
+        },
+        {
+            "desc": "cheese = cheese_rows(df)\nassert(set(cheese.columns) == {'city', 'month', 'product_name', 'sales'})",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (5)"
+        },
+        {
+            "desc": "assert(cheese.sales.sum() == 1130)",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (6)"
+        },
+        {
+            "desc": "cheese_1 = cheese_sales(df, 'Jan')\ncheese_2 = cheese_sales(df, 'Feb')\nassert(set(cheese_1.columns) == {'city', 'sales'})\nassert(set(cheese_2.columns) == {'city', 'sales'})",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (7)"
+        },
+        {
+            "desc": "assert(cheese_1.shape == (2,2))",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (8)"
+        },
+        {
+            "desc": "assert(cheese_2.shape == (1,2))",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (9)"
+        },
+        {
+            "desc": "assert(cheese_1.sales.sum() == 820)\nassert(cheese_2.sales.sum() == 310)",
+            "grade": 1.0,
+            "ok": true,
+            "title": "Test cases (10)"
+        }
+    ],
+    "success": 10.0,
+    "timestamp": "2019-12-04",
+    "total": 10.0
+}

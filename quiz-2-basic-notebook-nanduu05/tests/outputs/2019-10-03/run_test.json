@@ -1,0 +1,24 @@
+{
+    "driver": "run_test.py",
+    "duration": 4.721435070037842,
+    "error": "",
+    "name": "Test 1",
+    "output": "",
+    "results": [
+        {
+            "desc": "x = 1\ny = 2\nz = f1(x, y)\nassert(z == x + y)\nTesting the basic setup of the Notebook environment.",
+            "grade": 50.0,
+            "ok": true,
+            "title": "Adding (1)"
+        },
+        {
+            "desc": "x = [3, 2, 1]\ny = f2(x)\nassert(y == [1, 2, 3])",
+            "grade": 50.0,
+            "ok": true,
+            "title": "Adding (2)"
+        }
+    ],
+    "success": 100.0,
+    "timestamp": "2019-10-03",
+    "total": 100.0
+}
